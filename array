@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+  int arr[5];
+    int i=0;
+  while(i<=4)
+  {
+    printf("%d\n",arr[i]);
+    i++;
+  }
+}
