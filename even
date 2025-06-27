@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+int arr[5] = {1,2,8,9,6};
+printf("even number in array":);
+scanf("%d",&arr);
+return 0;
+}
