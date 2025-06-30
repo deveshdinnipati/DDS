@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include<stdlib.h>
-int main() {
-    int n;  //5
+int main() 
+{
+    int n;  
     printf("enter the size of array : ");
     scanf("%d", &n);
     int *arr = (int*)malloc(n * sizeof(int)); 
     
-    for(int i =0; i<n; i++){
+    for(int i =0; i<n; i++)
+{
         printf("\nenter the value at arr[%d] index : ",i);
         scanf("%d",&arr[i]);
     }
@@ -17,12 +19,13 @@ int main() {
     }
     
 
-    // increase the size of array  //7
-    int newSize;  //7
+    
+    int newSize;  
     printf("enter the new size : ");
     scanf("%d",&newSize);
      
-    if(newSize> n){
+    if(newSize> n)
+{
         int *newArr = (int*)realloc(arr,newSize*sizeof(int));
         for(int i =n; i<newSize; i++){
             printf("enter the value at arr[%d] index : ",i);
@@ -30,7 +33,8 @@ int main() {
         }
         
         printf("\nelements in new array = \n");
-        for(int i = 0; i<newSize; i++){
+        for(int i = 0; i<newSize; i++)
+{
             printf("%d\n",newArr[i]);
         }
     }
