@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+#define SIZE 5
+int Queue[SIZE];
+int rear=-1, front=-1;
+void equeue(int value){
+    if(rear == SIZE-1){
+        cout<<"underflow.\n";
+    }
+  
+    else{
+        rear++;
+        Queue[rear]==value;
+        cout<<value<<"removed.\n";
+    
+    }
+}
+void dequeue(){
+    if(front==-1 || front>rear){
+        cout<<"overflow \n";
+        front=-1;
+        rear-1;
+    }
+    
+    else{
+        cout<<Queue[front]<<"removed \n";
+        front++;
+    }
+}
+    void display(){
+        if(front==-1 || front>rear){
+        cout<<"Queue is empty:\n";
+    }
+    else {
+        cout<<"Queue elements :";
+        for(int i=front; i<=rear; i++){
+        cout<<Queue[i]<<" ";
+    }
+      cout<<endl;  
+    }
+}
+
+int main(){
+    equeue(10);
+    equeue(20);
+    equeue(30);
+display();
+dequeue();
+dequeue();
+display();
+    equeue(50);
+    equeue(80);
+    equeue(90);
+display();
+    dequeue();
+display();
+    
+}
