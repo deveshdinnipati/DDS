@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+#define SIZE 5
+
+void enqueue(int num);
+int Queue[SIZE];
+int rear=-1, front=-1;
+int main(){
+enqueue(10);
+enqueue(20);
+enqueue(30);
+enqueue(50);
+enqueue(80);
+enqueue(90);
+}
+
+void enqueue(int num){
+    if(rear==SIZE-1){
+        cout<<"overflow"<<num<<endl;}
+        else if(rear ==-1 && front==-1){
+            front=rear=0;
+            Queue[rear]=num;
+        }
+        else{
+            rear++;
+            Queue[rear]=num;
+            cout<<"inserted" <<num<<endl;
+        }
+    }
+
