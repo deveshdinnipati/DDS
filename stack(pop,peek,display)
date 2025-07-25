@@ -1,0 +1,161 @@
+push() method _____________________
+#include <iostream>
+using namespace std;
+#define size 5
+int stack[size]; 
+    int top = -1;
+    void push (int num ){
+        if(top<size-1){
+            top ++;
+            stack[top] = num;
+            cout<<num<<"inserted"<<endl;
+        }
+        else{
+            cout<<"stack is overview"<<endl;
+        }
+    }
+    
+int main(){
+    push(3);
+    push(2);
+    push(8);
+    push(5);
+    push(1);
+    push(11);
+}
+OUTPUT-----------
+3inserted
+2inserted
+8inserted
+5inserted
+1inserted
+stack is overview
+
+pop() method_____________________
+#include <iostream>
+using namespace std;
+#define size 5
+int stack[size]; 
+    int top = -1;
+    void pop (int num){
+        if(top==-1){
+            cout<<"stack is overflow"<<endl;
+        }
+        else{
+            cout<<stack[top]<<"removed"<<endl;
+            top--;
+        }
+    }
+    
+   int main(){
+    pop(30);
+    pop(20);
+    pop(10);
+    pop(11);
+} 
+
+OUTPUT--------
+stack is overflow
+stack is overflow
+stack is overflow
+stack is overflow
+
+peek() method _________________
+#include <iostream>
+using namespace std;
+#define size 5
+int stack[size]; 
+    int top = -1;
+    void peek (int num){
+        if(top==-1){
+            cout<<"stack is empty"<<endl;
+        }
+        else{
+            cout<<stack[top]<<"is on top"<<endl;
+        }
+    }
+    
+   int main(){
+    peek(20);
+    peek(10);
+    peek(11);
+} 
+
+OUTPUT----------
+stack is empty
+stack is empty
+stack is empty
+
+display()____________________________
+#include <iostream>
+using namespace std;
+#define size 5
+int stack[size];
+int top=-1;
+  
+    void push (int num ){
+        if(top<size-1){
+            top ++;
+            stack[top] = num;
+            cout<<num<<"inserted"<<endl;
+        }
+         else{
+            cout<<"stack is overview"<<endl;
+        }
+    }
+    
+    void pop (){
+        if(top==-1){
+            cout<<"stack is overflow"<<endl;
+        }
+        else{
+            cout<<stack[top]<<"removed"<<endl;
+            top--;
+        }
+    }
+    
+    void peek (int num){
+        if(top==-1){
+            cout<<"stack is empty"<<endl;
+        }
+        else{
+            cout<<stack[top]<<"is on top"<<endl;
+        }
+    }
+    
+    void display(){
+        if(top==-1){
+            cout<<"stack is empty or underflow"<<endl;
+        }
+        else{
+            for(int i=top;i>=0;i--){
+            cout<<stack[i]<<endl;
+        }
+    }
+    }
+     
+   int main(){
+       push(8);
+       push(80);
+       pop();
+       push(11);
+    display();
+
+} 
+
+OUTPUT-------------
+8inserted
+80inserted
+80removed
+11inserted
+11
+8
+
+
+STACK--- Liner data structure 
+LIFO--Last In First Out
+Element placed on the topof each other.
+Can be created using Array on link list.
+PUSH--------------------------
+can insert element in stack at top 
+chech for overflow condition if not overflow insert new elements
