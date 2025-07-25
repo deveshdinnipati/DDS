@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int gcd(int a, int b){
+    if(b==0)
+    
+    return a;
+   
+    return gcd(b,a%b);
+}
+ int main()
+ {
+     int a1=12;
+     int a2=18;
+    
+     cout<<"GCD of"<<a1<<"and"<<a2<<"is"<<gcd(a1,a2);
+     return 0;
+     
+ }
